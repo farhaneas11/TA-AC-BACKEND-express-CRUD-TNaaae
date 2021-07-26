@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>
+                User-Diary
+            </h1>
+        </div>
+    </header>
+    <main>
+        <section class="add-user">
+            <a href="/user/new">
+                Add New User
+            </a>
+        </section>
+        <% users.forEach((user)=> { %>
+            <section class="user-info">
+                <h2>
+                    <%= user.name %>
+                </h2>
+                <h3>
+                    <%= user.email %>
+                </h3>       
+                <a href="/user/<%= user._id %>">
+                    <button>
+                        Show Details
+                    </button>
+                </a>     
+            </section>
+        <% }) %>
+    </main>
+</body>
+</html>

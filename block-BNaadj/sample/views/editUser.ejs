@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>
+                User-Diary
+            </h1>
+        </div>
+    </header>
+    <main>
+        <section class="add-user">
+            <form action="/user/" method="POST">
+                <input type="text" placeholder="Name" name="name" value="<%= users.name %>">
+                <input type="text" placeholder="Email" name="email" value="<%= users.email %>">
+                <input type="number" placeholder="Age" name="age" value="<%= users.age %>">
+                <textarea name="bio" id="bio" cols="30" rows="10" placeholder="Biography" value="<%= users.bio %>">
+                    <%= users.bio %>
+                </textarea>
+                <button type="submit">
+                    Add User
+                </button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
