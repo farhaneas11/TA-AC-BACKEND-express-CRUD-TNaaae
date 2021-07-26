@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>
+                User-Diary
+            </h1>
+        </div>
+    </header>
+    <section class="user-details">
+        <h2>
+            <%= users.name %>
+        </h2>
+        <h3>
+            <%= users.email %>
+        </h3>
+        <h4>
+            <%= users.age %>
+        </h4>
+        <p>
+            <%= users.bio %>
+        </p>
+        <div class="user-detail-button">
+            <a href="/user/<%= users._id %>/edit">
+                Edit
+            </a>
+            <a href="/user/<%= users._id %>/delete">
+                Delete
+            </a>
+        </div>
+    </section>
+</body>
+</html>
